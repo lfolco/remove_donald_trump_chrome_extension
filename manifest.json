@@ -1,19 +1,27 @@
 {
-    "name": "Remove Donald Trump from Facebook",
-    "description": "Remove Donald Trump from Facebook Homepage",
-    "version": "2.3",
-    "manifest_version": 2,
-    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
-    "icons": {  "48": "icon48.png",
-               "128": "icon128.png" },
-    "content_scripts": [
-        {
-	    "matches":["*://*.facebook.com/*"],
-            "run_at": "document_start",
-            "js":["facebook_filter.js"]
-        }
-    ],
-    "background": {
-        "scripts": ["background.js"]
+  "name": "Remove Donald Trump from Facebook",
+  "description": "Remove Donald Trump from Facebook Homepage",
+  "version": "2.3",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "facebook_filter.js"
+      ]
     }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
 }
